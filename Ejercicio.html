@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o Impar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Fernando Jose Guillen Salazar 20250574 -->
+    <h2>¿El número es par o impar?</h2>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado"></p>
+ 
+    <script>
+        function verificar() {
+            let num = document.getElementById("numero").value;
+            let resultado = (num % 2 === 0) ? "par" : "impar";
+            document.getElementById("resultado").innerText = `El número ${num} es ${resultado}.`;
+        }
+    </script>
+ 
+</body>
+</html>
+ 
